@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <title>Redirecionando…</title>
+  <script>
+    // Redireciona imediatamente sem manter a página no histórico
+    (function () {
+      var url = "https://artibus.com.br?s=ayou";
+      // Usar replace evita que esta página fique no histórico de navegação
+      window.location.replace(url);
+    })();
+  </script>
+  <!-- Fallback discreto caso o JS esteja desabilitado -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://artibus.com.br?s=ayou">
+  </noscript>
+</head>
+<body></body>
+</html>
