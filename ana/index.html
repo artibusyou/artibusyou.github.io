@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoie Ana Cristina Damacena</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f4f8fb;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 450px;
+      width: 100%;
+      background: #fff;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1d3557;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+
+    .pix-box {
+      background: #f1f8ff;
+      border: 2px dashed #1d3557;
+      border-radius: 16px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+
+    .pix-key {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #1d3557;
+      margin-bottom: 8px;
+    }
+
+    button {
+      background: #1d3557;
+      color: #fff;
+      border: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 12px;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #457b9d;
+    }
+
+    .instagram {
+      margin-top: 24px;
+      font-size: 0.95rem;
+    }
+
+    .instagram a {
+      color: #e63946;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Toast */
+    .toast {
+      visibility: hidden;
+      min-width: 200px;
+      background-color: #1d3557;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 12px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      transform: translateX(-50%);
+      font-size: 0.95rem;
+      opacity: 0;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.85rem;
+      color: #555;
+      text-align: center;
+    }
+
+    footer a {
+      color: #1d3557;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Precisamos da sua ajuda</h1>
+    <p>A casa da nossa amiga <strong>Ana Cristina Damacena</strong> pegou fogo e ela perdeu tudo. 💔</p>
+    <p>Vamos nos unir para ajudá-la a recomeçar!</p>
+
+    <div class="pix-box">
+      <p class="pix-key">PIX: 012.917.609-54</p>
+      <p><strong>Ana Cristina Damacena</strong></p>
+      <button onclick="copyPix()">📋 Copiar Chave PIX</button>
+    </div>
+
+    <p>Qualquer contribuição faz a diferença ❤️</p>
+
+    <div class="instagram">
+      <p>Acompanhe no Instagram:</p>
+      <a href="https://instagram.com/ana_dmacena" target="_blank">@ana_dmacena</a>
+    </div>
+
+    <div id="toast" class="toast">Chave PIX copiada!</div>
+  </div>
+
+  <footer>
+    Criado com carinho 💙 para ajudar a Ana<br>
+    Desenvolvido por <a href="https://artibus.com.br?s=h" target="_blank">Artibus</a>
+  </footer>
+
+  <script>
+    function copyPix() {
+      const pixKey = "01291760954";
+      navigator.clipboard.writeText(pixKey).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
